@@ -1,0 +1,18 @@
+name: Validate catalog
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+      - name: Validate every app config.yaml
+        run: ruby .github/scripts/validate_catalog.rb .

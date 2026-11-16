@@ -1,0 +1,5 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "description": "Ce catalogue ne contient que de la configuration écrite par la CI des apps : aucune dépendance à suivre.",
+  "enabled": false
+}
