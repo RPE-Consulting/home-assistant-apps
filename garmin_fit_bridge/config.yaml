@@ -1,5 +1,5 @@
 name: Garmin FIT Bridge
-version: "0.2.0"
+version: "0.2.1"
 slug: garmin_fit_bridge
 description: Pont Garmin Connect passif pour les imports FIT déclenchés par HealthProject
 url: https://github.com/RPE-Consulting/HealthProject
