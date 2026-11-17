@@ -1,0 +1,66 @@
+name: "RPE E-Paper Renderer"
+version: "0.8.0"
+slug: "rpe_epaper_renderer"
+description: "Renders Home Assistant calendar, weather and indoor air data for an 800x480 e-paper display"
+url: "https://github.com/RPE-Consulting/rpe-iot-devices"
+arch:
+  - aarch64
+  - amd64
+startup: application
+boot: auto
+init: false
+homeassistant_api: true
+ports:
+  8099/tcp: 8099
+ports_description:
+  8099/tcp: "E-paper API exposed to the ESP32-C6"
+options:
+  device_token: "CHANGE_ME"
+  refresh_seconds: 60
+  home_refresh_seconds: 900
+  away_refresh_seconds: 3600
+  presence_unknown_refresh_seconds: 1800
+  service_unavailable_refresh_seconds: 1800
+  battery_low_refresh_seconds: 21600
+  battery_low_millivolts: 3500
+  quiet_start: "23:00"
+  quiet_end: "07:00"
+  presence_entities: []
+  timezone: "Europe/Paris"
+  calendar_entities: []
+  calendar_lookahead_days: 7
+  room_1_label: "Chambre 1"
+  room_2_label: "Chambre 2"
+  entities:
+    current_weather: ""
+    room_1_temperature: ""
+    room_1_humidity: ""
+    room_2_temperature: ""
+    room_2_humidity: ""
+schema:
+  device_token: password
+  firmware_upload_token: "password?"
+  refresh_seconds: "int(10,3600)"
+  home_refresh_seconds: "int(60,86400)"
+  away_refresh_seconds: "int(60,86400)"
+  presence_unknown_refresh_seconds: "int(60,86400)"
+  service_unavailable_refresh_seconds: "int(60,86400)"
+  battery_low_refresh_seconds: "int(60,86400)"
+  battery_low_millivolts: "int(2500,4500)"
+  quiet_start: str
+  quiet_end: str
+  presence_entities:
+    - str
+  timezone: str
+  calendar_entities:
+    - str
+  calendar_lookahead_days: "int(3,30)"
+  room_1_label: "str?"
+  room_2_label: "str?"
+  entities:
+    current_weather: "str?"
+    room_1_temperature: "str?"
+    room_1_humidity: "str?"
+    room_2_temperature: "str?"
+    room_2_humidity: "str?"
+image: ghcr.io/rpe-consulting/epaper-renderer
