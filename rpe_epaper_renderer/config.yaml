@@ -1,5 +1,5 @@
 name: "RPE E-Paper Renderer"
-version: "0.9.0"
+version: "0.10.0"
 slug: "rpe_epaper_renderer"
 description: "Renders Home Assistant calendar, weather and indoor air data for an 800x480 e-paper display"
 url: "https://github.com/RPE-Consulting/rpe-iot-devices"
@@ -25,6 +25,8 @@ options:
   service_unavailable_refresh_seconds: 1800
   battery_low_refresh_seconds: 21600
   battery_low_millivolts: 3500
+  silence_alert: true
+  battery_alert_percent: 20
   quiet_start: "23:00"
   quiet_end: "07:00"
   presence_entities: []
@@ -49,6 +51,9 @@ schema:
   service_unavailable_refresh_seconds: "int(60,86400)"
   battery_low_refresh_seconds: "int(60,86400)"
   battery_low_millivolts: "int(2500,4500)"
+  silence_alert: bool
+  battery_alert_percent: "int(0,100)"
+  alert_notify_service: "str?"
   quiet_start: str
   quiet_end: str
   presence_entities:
