@@ -1,0 +1,25 @@
+name: Garmin FIT Bridge
+version: "0.2.0"
+slug: garmin_fit_bridge
+description: Pont Garmin Connect passif pour les imports FIT déclenchés par HealthProject
+url: https://github.com/RPE-Consulting/HealthProject
+arch:
+  - aarch64
+  - amd64
+startup: application
+boot: auto
+init: false
+ingress: true
+ingress_port: 8788
+panel_icon: mdi:watch-import
+panel_title: Garmin FIT
+ports:
+  8788/tcp: null
+ports_description:
+  8788/tcp: API privée destinée au tunnel Cloudflare
+backup_exclude:
+  - garmin_tokens
+  - bridge_token
+  - account.json
+schema: {}
+image: ghcr.io/rpe-consulting/garmin-fit-bridge
