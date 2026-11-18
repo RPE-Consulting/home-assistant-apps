@@ -1,5 +1,5 @@
 name: "RPE E-Paper Renderer"
-version: "0.11.3"
+version: "0.11.4"
 slug: "rpe_epaper_renderer"
 description: "Renders Home Assistant calendar, weather and indoor air data for an 800x480 e-paper display"
 url: "https://github.com/RPE-Consulting/rpe-iot-devices"

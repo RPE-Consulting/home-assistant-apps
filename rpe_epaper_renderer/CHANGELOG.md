@@ -1,5 +1,17 @@
 # Changelog
 
+## 0.11.4
+
+- la ligne de journal de chaque visite indique aussi le temps que l'écran a
+  passé en sommeil léger pendant son cycle précédent (`previous cycle 6.6 s
+  with 2.9 s asleep`), quand le firmware le mesure ;
+- livre le firmware 0.5.4, qui peut dormir pendant que l'écran se redessine au
+  lieu d'attendre processeur allumé. La phase radio (Wi-Fi, appairage,
+  téléchargement) n'est pas modifiée. Ce sommeil léger n'est actif que si la
+  configuration de compilation de l'écran active la gestion d'énergie.
+
+Firmware de l'écran livré : 0.5.4.
+
 ## 0.11.3
 
 - le journal écrit une ligne par visite de l'écran : la cause du réveil, le
