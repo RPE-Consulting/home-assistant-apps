@@ -1,5 +1,18 @@
 # Changelog
 
+## 0.11.3
+
+- le journal écrit une ligne par visite de l'écran : la cause du réveil, le
+  signal, les échecs précédents, la durée du cycle précédent, puis le code de
+  la réponse et le temps mis à répondre. Une réponse que l'écran n'a pas
+  attendue est signalée par un avertissement ;
+- nouveau capteur « Durée de fonctionnement », en heures : le temps écoulé
+  depuis le dernier démarrage de l'écran qui n'est pas un réveil de son
+  sommeil (mise sous tension, flash, plantage, mise à jour). Il figure aussi
+  dans la ligne de journal de chaque visite. Il faut le firmware 0.5.3.
+
+Firmware de l'écran livré : 0.5.3.
+
 ## 0.11.2
 
 - livre le firmware 0.5.2, qui écrit dans son journal combien de temps l'écran
